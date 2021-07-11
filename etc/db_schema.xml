@@ -1,0 +1,27 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+
+    <table name="test_custom_product_index" resource="default" engine="innodb" comment="Test Custom Product Index">
+        <column xsi:type="int" name="id" unsigned="true" nullable="false" identity="true" comment="ID"/>
+        <column xsi:type="int" name="product_id" unsigned="true" nullable="false" identity="false"
+                default="0" comment="Product ID"/>
+        <column xsi:type="smallint" name="result" unsigned="false" nullable="false" identity="false" comment="Result"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+        <constraint xsi:type="unique" referenceId="TEST_CUSTOM_PRODUCT_INDEX_ID_PRODUCT_ID_RESULT">
+            <column name="id"/>
+            <column name="product_id"/>
+            <column name="result"/>
+        </constraint>
+        <constraint xsi:type="foreign" referenceId="TEST_CUSTOM_PRODUCT_INDEX_ID_CAT_PRD_ENT_ENT_ID"
+                    table="test_custom_product_index" column="product_id" referenceTable="catalog_product_entity"
+                    referenceColumn="entity_id" onDelete="CASCADE"/>
+        <index indexType="btree" referenceId="TEST_CUSTOM_PRODUCT_INDEX_PRODUCT_ID">
+            <column name="product_id"/>
+        </index>
+        <index indexType="btree" referenceId="TEST_CUSTOM_PRODUCT_INDEX_RESULT">
+            <column name="result"/>
+        </index>
+    </table>
+
+</schema>

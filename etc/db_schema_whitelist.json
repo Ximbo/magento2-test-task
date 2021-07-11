@@ -1,0 +1,18 @@
+{
+    "test_custom_product_index": {
+        "column": {
+            "id": true,
+            "product_id": true,
+            "result": true
+        },
+        "index": {
+            "TEST_CUSTOM_PRODUCT_INDEX_PRODUCT_ID": true,
+            "TEST_CUSTOM_PRODUCT_INDEX_RESULT": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "TEST_CUSTOM_PRODUCT_INDEX_ID_PRODUCT_ID_RESULT": true,
+            "TEST_CUSTOM_PRD_IDX_PRD_ID_CAT_PRD_ENTT_ENTT_ID": true
+        }
+    }
+}

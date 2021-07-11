@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Indexer/etc/indexer.xsd">
+    <indexer id="test_custom_product_index" view_id="intro_even_odd_product_identifier" class="Acme\Intro\Model\Indexer\CustomIndexer">
+        <title translate="true">Test Custom Product Index</title>
+        <description translate="true">Even/Odd product identifier</description>
+    </indexer>
+</config>

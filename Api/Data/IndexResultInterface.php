@@ -15,6 +15,7 @@ use Acme\Intro\Api\Data\IndexResultExtensionInterface;
  */
 interface IndexResultInterface extends ExtensibleDataInterface
 {
+    const ID = 'id';
     const PRODUCT_ID = "product_id";
     const RESULT = 'result';
 

@@ -37,20 +37,20 @@ class Loader
 
     /**
      * @param int $productId
-     * @return array
+     * @return int
      * @throws \Exception
      */
-    public function getResultByProductId(int $productId): array
+    public function getResultIdByProductId(int $productId): int
     {
         $metadata = $this->metadataPool->getMetadata(IndexResultInterface::class);
         $connection = $this->resourceConnection->getConnection();
 
         $select = $connection
             ->select()
-            ->from($metadata->getEntityTable(), IndexResultInterface::RESULT)
+            ->from($metadata->getEntityTable(), IndexResultInterface::ID)
             ->where(IndexResultInterface::PRODUCT_ID . ' = ?', $productId);
-        $ids = $connection->fetchCol($select);
+        $id = $connection->fetchCol($select);
 
-        return $ids ?: [];
+        return (int) $id;
     }
 }

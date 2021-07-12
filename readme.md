@@ -39,3 +39,4 @@ php bin/magento indexer:reindex test_custom_product_index
 ### Ссылки
 
 [https://devdocs.magento.com/guides/v2.4/extension-dev-guide/indexing-custom.html](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/indexing-custom.html)
+[https://devdocs.magento.com/guides/v2.4/extension-dev-guide/extension_attributes/adding-attributes.html](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/extension_attributes/adding-attributes.html)

@@ -34,3 +34,8 @@ php bin/magento indexer:reindex test_custom_product_index
 ### 3. Проверьте, пожалуйста, что ваш модуль рабочий, его можно установить, включить и проверить.
    И приложите ссылки на документацию и примеры (если были), которыми вы пользовались при разработке модуля.
 
+----
+
+### Ссылки
+
+[https://devdocs.magento.com/guides/v2.4/extension-dev-guide/indexing-custom.html](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/indexing-custom.html)

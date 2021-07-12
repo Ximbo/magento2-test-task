@@ -4,7 +4,7 @@
  * @author   : Acme Company <mail@example.com>
  */
 
-namespace Acme\Intro\Model\Plugin;
+namespace Acme\Intro\Model\Plugin\Product;
 
 use Magento\Catalog\Api\ProductRepositoryInterface;
 use Magento\Catalog\Api\Data\ProductInterface;
@@ -16,7 +16,7 @@ use Magento\Catalog\Api\Data\ProductExtensionFactory;
  * Class ProductRepository
  * @package Acme\Intro\Model\Plugin
  */
-class ProductRepository
+class Repository
 {
     /** @var IndexResultProviderInterface */
     private IndexResultProviderInterface $indexResultProvider;

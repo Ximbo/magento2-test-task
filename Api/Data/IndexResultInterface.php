@@ -7,6 +7,7 @@
 namespace Acme\Intro\Api\Data;
 
 use Magento\Framework\Api\ExtensibleDataInterface;
+use Acme\Intro\Api\Data\IndexResultExtensionInterface;
 
 /**
  * Interface IndexResultInterface
@@ -40,13 +41,13 @@ interface IndexResultInterface extends ExtensibleDataInterface
     public function setResult(int $result): self;
 
     /**
-     * @return IndexResultInterface|null
+     * @return IndexResultExtensionInterface|null
      */
-    public function getExtensionAttributes(): ?IndexResultInterface;
+    public function getExtensionAttributes(): ?IndexResultExtensionInterface;
 
     /**
-     * @param IndexResultInterface $extensionAttributes
+     * @param IndexResultExtensionInterface $extensionAttributes
      * @return self
      */
-    public function setExtensionAttributes(IndexResultInterface $extensionAttributes): self;
+    public function setExtensionAttributes(IndexResultExtensionInterface $extensionAttributes): self;
 }

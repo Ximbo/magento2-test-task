@@ -8,17 +8,12 @@
         <constraint xsi:type="primary" referenceId="PRIMARY">
             <column name="id"/>
         </constraint>
-        <constraint xsi:type="unique" referenceId="TEST_CUSTOM_PRODUCT_INDEX_ID_PRODUCT_ID_RESULT">
-            <column name="id"/>
+        <constraint xsi:type="unique" referenceId="TEST_CUSTOM_PRODUCT_INDEX_PRODUCT_ID_UNIQUE">
             <column name="product_id"/>
-            <column name="result"/>
         </constraint>
         <constraint xsi:type="foreign" referenceId="TEST_CUSTOM_PRODUCT_INDEX_ID_CAT_PRD_ENT_ENT_ID"
                     table="test_custom_product_index" column="product_id" referenceTable="catalog_product_entity"
                     referenceColumn="entity_id" onDelete="CASCADE"/>
-        <index indexType="btree" referenceId="TEST_CUSTOM_PRODUCT_INDEX_PRODUCT_ID">
-            <column name="product_id"/>
-        </index>
         <index indexType="btree" referenceId="TEST_CUSTOM_PRODUCT_INDEX_RESULT">
             <column name="result"/>
         </index>

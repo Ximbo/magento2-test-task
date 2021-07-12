@@ -16,7 +16,7 @@ interface IndexResultProviderInterface
 {
     /**
      * @param int $productId
-     * @return IndexResultInterface
+     * @return int
      */
-    public function getIndexResult(int $productId): IndexResultInterface;
+    public function getIndexResult(int $productId): int;
 }

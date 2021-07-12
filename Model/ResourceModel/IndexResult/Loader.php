@@ -40,14 +40,14 @@ class Loader
      * @return array
      * @throws \Exception
      */
-    public function getResultIdByProductId(int $productId): array
+    public function getResultByProductId(int $productId): array
     {
         $metadata = $this->metadataPool->getMetadata(IndexResultInterface::class);
         $connection = $this->resourceConnection->getConnection();
 
         $select = $connection
             ->select()
-            ->from($metadata->getEntityTable(), IndexResultInterface::ID)
+            ->from($metadata->getEntityTable(), IndexResultInterface::RESULT)
             ->where(IndexResultInterface::PRODUCT_ID . ' = ?', $productId);
         $ids = $connection->fetchCol($select);
         return $ids ?: [];

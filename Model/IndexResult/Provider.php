@@ -46,10 +46,20 @@ class Provider implements IndexResultProviderInterface
      * @inheirtDoc
      * @throws \Exception
      */
-    public function getIndexResult(int $productId): IndexResultInterface
+    public function getIndexResult(int $productId): int
     {
-        $id = $this->loader->getResultIdByProductId($productId);
+        $result = $this->loader->getResultByProductId($productId);
+        return (int) $result[0];
+        $results = [];
+        foreach($ids as $id) {
+            $result = $this->indexResultFactory->create();
+            $results[] = $this->entityManager->load($result, $id);
+        }
+
+        return $results;
+
         $result = $this->indexResultFactory->create();
-        return $this->entityManager->load($result, $id);
+        $entity =  $this->entityManager->load($result, $id);
+        return $entity;
     }
 }

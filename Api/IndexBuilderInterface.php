@@ -17,7 +17,7 @@ interface IndexBuilderInterface
      *
      * @return void
      */
-    public function reindexAll();
+    public function reindexAll(): void;
 
     /**
      * Reindex partial indexation by ID list
@@ -25,7 +25,7 @@ interface IndexBuilderInterface
      * @param int[] $ids
      * @return void
      */
-    public function reindexList(array $ids);
+    public function reindexList(array $ids): void;
 
     /**
      * Reindex partial indexation by ID
@@ -33,5 +33,5 @@ interface IndexBuilderInterface
      * @param int $id
      * @return void
      */
-    public function reindex(int $id);
+    public function reindex(int $id): void;
 }

@@ -18,6 +18,28 @@ interface IndexResultInterface extends ExtensibleDataInterface
     const RESULT = 'result';
 
     /**
+     * @return int
+     */
+    public function getProductId(): int;
+
+    /**
+     * @return int
+     */
+    public function getResult(): int;
+
+    /**
+     * @param int $id
+     * @return $this
+     */
+    public function setProductId(int $id): self;
+
+    /**
+     * @param int $id
+     * @return $this
+     */
+    public function setResult(int $id): self;
+
+    /**
      * @return IndexResultInterface|null
      */
     public function getExtensionAttributes(): ?IndexResultInterface;

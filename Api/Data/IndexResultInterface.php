@@ -34,10 +34,10 @@ interface IndexResultInterface extends ExtensibleDataInterface
     public function setProductId(int $id): self;
 
     /**
-     * @param int $id
+     * @param int $result
      * @return $this
      */
-    public function setResult(int $id): self;
+    public function setResult(int $result): self;
 
     /**
      * @return IndexResultInterface|null

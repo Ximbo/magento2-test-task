@@ -3,6 +3,7 @@
     <preference for="Acme\Intro\Api\IndexBuilderInterface" type="Acme\Intro\Model\Indexer\IndexBuilder"/>
     <preference for="Acme\Intro\Api\RuleCalculatorInterface" type="Acme\Intro\Model\RuleCalculator"/>
     <preference for="Acme\Intro\Api\Data\IndexResultInterface" type="Acme\Intro\Model\IndexResult"/>
+    <preference for="Acme\Intro\Api\IndexResultProviderInterface" type="Acme\Intro\Model\IndexResult\Provider"/>
 
     <type name="Magento\Catalog\Api\ProductRepositoryInterface">
         <plugin name="joinIndexResultToProductRepositoryList" type="Acme\Intro\Model\Plugin\Product\Repository"/>

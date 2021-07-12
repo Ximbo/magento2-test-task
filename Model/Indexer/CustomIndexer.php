@@ -24,16 +24,16 @@ use Magento\Framework\Exception\LocalizedException;
 class CustomIndexer implements IndexerActionInterface, MviewActionInterface, IdentityInterface
 {
     /** @var CacheInterface */
-    private $cacheManager;
+    private CacheInterface $cacheManager;
 
     /** @var CacheContext */
-    private $cacheContext;
+    private CacheContext $cacheContext;
 
     /** @var ManagerInterface */
-    private $eventManager;
+    private ManagerInterface $eventManager;
 
     /** @var IndexBuilderInterface */
-    private $indexBuilder;
+    private IndexBuilderInterface $indexBuilder;
 
     /**
      * @param CacheInterface $cacheManager

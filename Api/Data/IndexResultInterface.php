@@ -44,7 +44,7 @@ interface IndexResultInterface extends ExtensibleDataInterface
     /**
      * @return IndexResultExtensionInterface|null
      */
-    public function getExtensionAttributes(): ?IndexResultExtensionInterface;
+    public function getExtensionAttributes();
 
     /**
      * @param IndexResultExtensionInterface $extensionAttributes

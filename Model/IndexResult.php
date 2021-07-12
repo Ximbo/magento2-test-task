@@ -16,13 +16,13 @@ use Acme\Intro\Api\Data\IndexResultExtensionInterface;
 class IndexResult implements IndexResultInterface
 {
     /** @var int */
-    private int $productId;
+    private int $productId = 0;
 
     /** @var int */
-    private int $result;
+    private int $result = 500;
 
     /** @var array */
-    private array $extensionAttributes;
+    private array $extensionAttributes = [];
 
     /**
      * @inheirtDoc
@@ -62,7 +62,7 @@ class IndexResult implements IndexResultInterface
     /**
      * @inheirtDoc
      */
-    public function getExtensionAttributes(): ?IndexResultExtensionInterface
+    public function getExtensionAttributes()
     {
         return $this->extensionAttributes;
     }

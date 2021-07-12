@@ -10,7 +10,7 @@ namespace Acme\Intro\Api;
  * Interface RuleCalculator
  * @package Acme\Intro\Api
  */
-interface RuleCalculator
+interface RuleCalculatorInterface
 {
     /**
      * Calculate result based on input value
